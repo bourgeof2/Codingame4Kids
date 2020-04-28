@@ -1,7 +1,7 @@
 {
 "name" :"Codingame 4 Kids",
 "manifest_version" : 2,
-"version" :"0.7",
+"version" :"0.8",
 "description" :"Enable to play 'The Great Escape' with blockly.",
 "icons": { "16": "icon.png",
            "48": "icon48.png",

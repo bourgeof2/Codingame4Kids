@@ -487,11 +487,9 @@ function searchCodeContent() {
 	  codeContent.hide();
 	  blocklyArea = codeContent.parent();
 	  blocklyArea.append(htmlCode);
-	  //$(".play").eq(0).hide();
 	  $(".play").eq(0).bind("mouseenter", blocklyToCG);
 	  $(".replay").eq(0).bind("mouseenter", blocklyToCG);
 	  $(".submit").eq(0).bind("mouseenter", blocklyToCG);
-	  //$(".code-management").eq(0).hide();
 	  
 	  var codeManagement = $(".code-management").eq(0)
 	  codeManagement.after(htmlButton);
@@ -507,10 +505,6 @@ function searchCodeContent() {
 			}
 		});
 	  
-	  
-	  // restore
-	  //var xml = Blockly.Xml.textToDom(xml_text);
-	  //Blockly.Xml.domToWorkspace(xml, workspace);
 	  getCode();
 
 	  var fboGenerateCode = $(".fboGenerateCode").eq(0)
@@ -519,26 +513,17 @@ function searchCodeContent() {
 		  if (blocklyD.is(":visible")) {
 			  blocklyD.hide();
 			  blocklyToCG();
-			  //$(".play").eq(0).show();
-			  //$(".replay").eq(0).show();
 			  $("#blocklyDiv").eq(0).hide();
 			  $(".code-content").eq(0).show();
-			  //$(".submit").eq(0).show();
 			  $(".fboGenerateCode").eq(0).text("<= Revenir aux blocks");
-			  //$(".code-management").eq(0).show();
 	  $(".play").eq(0).unbind("mouseenter", blocklyToCG);
 	  $(".replay").eq(0).unbind("mouseenter", blocklyToCG);;
 	  $(".submit").eq(0).unbind("mouseenter", blocklyToCG);
 		  } else {
 			  blocklyD.show();
-			  //$(".play").eq(0).hide();
-			  $(".code-management").eq(0).hide();
-			  //$(".replay").eq(0).hide();
 			  $("#blocklyDiv").eq(0).show();
 			  $(".code-content").eq(0).hide();
-			  //$(".submit").eq(0).hide();
 			  $(".fboGenerateCode").eq(0).text(htmlButtonText1);
-			  //$(".code-management").eq(0).hide();
 	  $(".play").eq(0).bind("mouseenter", blocklyToCG);
 	  $(".replay").eq(0).bind("mouseenter", blocklyToCG);
 	  $(".submit").eq(0).bind("mouseenter", blocklyToCG);

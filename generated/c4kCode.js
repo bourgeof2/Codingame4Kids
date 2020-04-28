@@ -192,13 +192,11 @@ function personnageBloque(personnage, mur_list) {
     var orinalP = new Point();
     orinalP.x = personnage.x;
     orinalP.y = personnage.y;
-    console.error('start for: '+orinalP.x+' '+orinalP.y);
     opened.push(orinalP);
     while(opened.length) {
         var p = new Point();
         p.x = opened[0].x;
         p.y = opened[0].y;
-        console.error(p.x+' '+p.y);
         opened.shift();
         closed.push(p);
         if (p.x == 0 && personnage.id == 1) return false;
@@ -256,7 +254,6 @@ function personnageBloque(personnage, mur_list) {
             }
         }
     }
-    console.error("test");
     return true;
 }
 
@@ -278,45 +275,45 @@ function mettreMur(joueur, personnage, ajout_x, ajout_y, orientation, adversaire
     if (joueur.mursRestants <= 0)
         return "Erreur! Action invalide! Le personnage n'a plus de mur à poser!";
     if (personnage.x + ajout_x < 0 || (personnage.x + ajout_x < 1 && orientation == 'V'))
-        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+')';
+        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+')';
     if (personnage.x + ajout_x > 8 || (personnage.x + ajout_x > 7 && orientation == 'H'))
-        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+')';
+        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+')';
     if (personnage.y + ajout_y < 0 || (personnage.y + ajout_y < 1 && orientation == 'H'))
-        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+')';
+        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+')';
     if (personnage.y + ajout_y > 8 || (personnage.y + ajout_y > 7 && orientation == 'V'))
-        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+')';
+        return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici! ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+')';
     for (var mur_index in mur_list) {
         mur = mur_list[mur_index];
-        if (mur.orientation == "H" && orientation == "H" && mur.y == personnage.y + ajout_y) {
+         if (mur.orientation == "H" && orientation == "H" && mur.y == personnage.y + ajout_y) {
             if (mur.x == personnage.x + ajout_x || mur.x + 1 == personnage.x + ajout_x || mur.x - 1 == personnage.x + ajout_x)
-				return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+') car il chevauche un mur existant ('+mur.x+', '+mur.y+')';
+				return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+') car il chevauche un mur existant ('+mur.x+', '+mur.y+')';
         }
         if (mur.orientation == "V" && orientation == "V" && mur.x == personnage.x + ajout_x) {
-            if (mur.y == personnage.y + ajout_y || mur.y + 1 == personnage.y + ajout_y || mur.y - 1 == personnage.y + ajout_y)
-				return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+') car il chevauche un mur existant ('+mur.x+', '+mur.y+')';
+            if (mur.y == personnage.y + ajout_y || mur.y + 1 == personnage.y + ajout_y || mur.y - 1 == personnage.y + ajout_y) {
+				return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+') car il chevauche un mur existant ('+mur.x+', '+mur.y+')';
+            }
         }
         if (mur.orientation == "H" && orientation == "V" && mur.x + 1 == personnage.x + ajout_x && mur.y - 1 == personnage.y + ajout_y) {
-			return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+') car il croise un mur existant ('+mur.x+', '+mur.y+')';
+			return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+') car il croise un mur existant ('+mur.x+', '+mur.y+')';
         }
         if (mur.orientation == "V" && orientation == "H" && mur.x - 1 == personnage.x + ajout_x && mur.y + 1 == personnage.y + ajout_y) {
-			return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+') car il croise un mur existant ('+mur.x+', '+mur.y+')';
+			return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+(personnage.x + ajout_x)+', '+(personnage.y + ajout_y)+') car il croise un mur existant ('+mur.x+', '+mur.y+')';
         }
     }
 
-    //var mur_list2 = mur_list;
+    var mur_list2 = mur_list.slice();
     var newMur = new Mur ();
     newMur.x = personnage.x + ajout_x;
     newMur.y = personnage.y + ajout_y;
     newMur.orientation = orientation;
-    mur_list.push(newMur);
+    mur_list2.push(newMur);
 
-    var joueurBloque = isJoueursBloque(joueur, adversaires, mur_list)
+    var joueurBloque = isJoueursBloque(joueur, adversaires, mur_list2)
     if (joueurBloque != -1)
         return 'Erreur! Action invalide! un mur '+orientationString+' ne peut pas être poser ici ('+personnage.x + ajout_x+', '+personnage.y + ajout_y+') car il bloque le joueur '+joueurBloque;
 
     return (personnage.x + ajout_x) + ' ' + (personnage.y + ajout_y) + ' ' + orientation;
 }
-
 
 function murDevant(gauche_droite, joueur, personnage, adversaires, mur_list) {
     if (personnage.id === 0)
