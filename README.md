@@ -38,7 +38,7 @@ Dans ce jeu, le but est d'atteindre le bord opposé de son point de départ tout
 1. Sur la page de profil (voir ci-dessus), cliquez sur l'onglet "AMIS":
 ![amis1](pictures/amis1.png)
 2. Cliquer sur "TROUVEZ VOS AMIS"
-3. Ajouter moi en cherchant le pseudo de vos amis (Ajoutez bourgeof!)
+3. Chercher le pseudo de vos amis (Ajoutez bourgeof!)
 ![amis2](pictures/amis2.png)
 
 ## Etpae 3: Aller sur "The Great Escape"
@@ -54,7 +54,10 @@ Ré-essayer l'étape 1, puis raffraichir cette page (F5).
 
 ## Etape 4: Découverte de l'interface
 
-![interface](pictures/interface.png)
+1. Partie de gauche
+![interface1](pictures/interface1.png)
+2. Partie de droite
+![interface2](pictures/interface2.png)
 
 ## Etape 5: Un premier code
 
