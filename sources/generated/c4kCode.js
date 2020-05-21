@@ -372,7 +372,7 @@ ${initCode}
 
 
 // Boucle principale du jeu
-var tour = 1;
+var tour = 0;
 mainloop:
 while (true) {
     // Récupération des données d'entrées
@@ -409,6 +409,7 @@ while (true) {
         murs[i].orientation = entrees[2]; // orientation du mur ('H' pour horizontal ou 'V' pour vertical)
     }
 
+	tour++;
 /*********************************************************************/
 
     /*********************************************************************/
@@ -421,8 +422,8 @@ while (true) {
     /*********************************************************************/
     /***************** Fin du code boucle principale   *******************/
     /*********************************************************************/
-
-	tour++;
+	
+	console.log("Aucune action effectuée... Utilisez le bloc 'Jouer l'action'!")
 }
 `;
   return code;

@@ -268,7 +268,7 @@ Blockly.Blocks['playaction'] = {
   init: function() {
     this.appendValueInput("action")
         .setCheck("Action")
-        .appendField("jouer l'action");
+        .appendField("Jouer l'action");
     this.appendDummyInput()
         .appendField("avec le message")
         .appendField(new Blockly.FieldTextInput("coucou!"), "message")
