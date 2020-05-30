@@ -198,7 +198,7 @@ Il est alors possible d'utiliser la variable adversaire à l'intérieur de cette
 Exemple:\
 ![paf-le-mur](pictures/blocs/paf-le-mur.png)
 
-##Logique
+## Logique
 ### Si / Sinon
 ![si](pictures/blocs/si.png)\
 Un bloc très important. Il faut mettre une condition à droite du "Si" et des choses à faire à l'intérieur du "faire".\
@@ -228,7 +228,7 @@ Pour générer un nombre aléatoire.
 ![bloc-jeu](pictures/blocs/texte.png)\
 Permet de manipuler du texte. peut être intéressant lors de l'utilisation des variables.
 
-##Variables
+## Variables
 Les variables vous permettront de faire des choese plus poussées et pourquoi pas d'atteindre la ligue argent...\
 Ce sont des mémoires dans lequel, on peut stocker un état ou une valeur.\
 Une fois qu'une variable existe, il est possible:
