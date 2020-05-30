@@ -31,7 +31,7 @@ Pour une première expérience, ou pour les plus jeunes, il est plutôt conseill
 ## Etape 2: Créer un profil sur Codingame
 ### Créer un compte
 1. Aller sur http://www.codingame.com
-2. Cliquez sur ![inscrire1](pictures/inscrire1.PNG)
+2. Cliquez sur ![inscrire1](pictures/inscrire1.png)
 3. Ajouter une adresse mail et choisir un mot de passe (ou se connecter avec google, facebook, etc...):\
 ![inscrire2](pictures/inscrire2.png)
 
