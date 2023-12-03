@@ -50,8 +50,7 @@ Pour une première expérience, ou pour les plus jeunes, il est plutôt conseill
 ![amis2](pictures/amis2.png)
 
 ## Etape 3: Aller sur "The Great Escape"
-1. sur http://wwww.codingame.com, dans le menu du haut, choisir \
-![competition1](pictures/competition1.png).
+1. sur http://wwww.codingame.com, dans le menu du haut, choisir MULTI.
 2. Cliquer sur le texte "COMBATS DE BOTS": \
  ![competition2](pictures/competition2.png)
 2. Trouver et cliquer sur "The GREAT ESCAPE": \
